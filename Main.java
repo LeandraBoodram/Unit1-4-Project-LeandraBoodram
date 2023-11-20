@@ -42,7 +42,8 @@ public class Main {
                     System.out.println("3. " + cyan + "Siren/Triton" + reset);
                     System.out.println("4. " + magenta + "Sorcerer" + reset);
                     System.out.println("randomizing clan....");
-                    clan = Clan.randomizeClan(1, 4);
+                    //clan = Clan.randomizeClan(1, 4);
+                    clan = 1;
                     if (clan == 1) {
                         while (!(action.equals("run") || action.equals("follow") || action.equals("sleep"))) {
                             role = "vampire";
@@ -147,6 +148,8 @@ public class Main {
                                                         System.out.println(blue + "NEW ENDING UNLOCKED");
                                                         System.out.println("--------------------------------");
                                                         System.out.println("Not only did you save the world but you also saved humanity!");
+                                                       clanAttributes.endGame();
+                                                        System.exit(0);
                                                     } else if (thirdOption.equals("sleep")) {
                                                         System.out.println("You let your guard down and die");
                                                         System.out.println();
@@ -201,6 +204,8 @@ public class Main {
                                                         System.out.println(blue + "NEW ENDING UNLOCKED");
                                                         System.out.println("--------------------------------");
                                                         System.out.println("Not only did you save the world but you also saved humanity!");
+                                                        clanAttributes.endGame();
+                                                        System.exit(0);
                                                     } else if (thirdOption.equals("sleep")) {
                                                         System.out.println("You let your guard down and die");
                                                         clanAttributes.endGame();
